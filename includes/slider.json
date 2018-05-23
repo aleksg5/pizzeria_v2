@@ -1,0 +1,23 @@
+[
+    {
+        "img" : "1.jpg",
+        "header" : "Najlepsza pizza w mieście",
+        "description" : "Przyjdź do nas lub zamów telefonicznie i przekonaj się sam",
+        "link" : "#menu",
+        "linkDescription" : "Zobacz menu"
+    },
+    {
+        "img" : "2.jpg",
+        "header" : "Promocja 50%",
+        "description" : "Tylko w tym tygodniu makarony tańsze o połowę",
+        "link" : "#offers",
+        "linkDescription" : "Zobacz więcej promocji"
+    },
+    {
+        "img" : "3.jpg",
+        "header" : "Nowość - Sałatki",
+        "description" : "Już dzisiaj spróbuj naszą najnowszą pozycję w menu",
+        "link" : "#menu",
+        "linkDescription" : "Zobacz menu"
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "title" : "Promocja 50%",
+        "img" : "img/offers/makaron.jpg",
+        "description" : "Tylko w tym tygodniu makarony tańsze o połowę"
+    },
+    {
+        "title" : "Cola-Cola gratis",
+        "img" : "img/offers/cola.jpg",
+        "description" : "Złóż zamówienie powyżej 30 zł a Coca-Cola 0,5 l otrzymasz gratis!" 
+    },
+    {
+        "title" : "Promocje dla studentów",
+        "img" : "img/offers/indeks.jpg",
+        "description" : "20% zniżki dla studentów na wszystkie pozycje w menu"
+    }
+]

@@ -1,0 +1,215 @@
+[
+    {
+        "pizza" : 
+        [
+            {
+                "name" : "Margherita",
+                "ingredients" : "Sos, podwójny ser",
+                "price" : "14 zł"
+            },
+            {
+                "name" : "Salame",
+                "ingredients" : "Sos, ser, salami",
+                "price" : "19 zł"
+            },
+            {
+                "name" : "Prosciuto",
+                "ingredients" : "Sos, ser, szynka",
+                "price" : "19 zł"
+            },
+            {
+                "name" : "Hawaii",
+                "ingredients" : "Sos, ser, szynka, ananas",
+                "price" : "22 zł"
+            },
+            {
+                "name" : "Filippo",
+                "ingredients" : "Sos, mozzarella, gorgonzola, parmezan",
+                "price" : "24 zł"
+            },
+            {
+                "name" : "Antonio",
+                "ingredients" : "Sos, ser, salami, szynka, boczek",
+                "price" : "28 zł"
+            },
+            {
+                "name" : "Pescatore",
+                "ingredients" : "Sos, ser, tuńczyk, cebula, kapary",
+                "price" : "25 zł"
+            },
+            {
+                "name" : "La Scala",
+                "ingredients" : "Sos, ser, salami, pomidor, camembert",
+                "price" : "24 zł"
+            },
+            {
+                "name" : "Sole",
+                "ingredients" : "Sos, ser, szynka, anchois, czosnek, kapary",
+                "price" : "25 zł"
+            },
+            {
+                "name" : "Diavolo",
+                "ingredients" : "Sos, ser, boczek, cebula, papryka pepperoni, płatki chili",
+                "price" : "26 zł"
+            },
+            {
+                "name" : "Siciliana",
+                "ingredients" : "Sos, ser, salami, gorgonzola, pomidor, czosnek",
+                "price" : "27 zł"
+            },
+            {
+                "name" : "Vegetariana",
+                "ingredients" : "Sos, ser, pieczarki, pomidorki koktajlowe, świeża bazylia",
+                "price" : "25 zł"
+            },
+            {
+                "name" : "Italia",
+                "ingredients" : "Sos, ser, salami, pomidor, oliwki, ser feta, świeża bazylia",
+                "price" : "28 zł"
+            },
+            {
+                "name" : "Mamma Mia",
+                "ingredients" : "Sos, ser, salami, kurczak, cebula",
+                "price" : "28 zł"
+            },
+            {
+                "name" : "Frutti Di Mare",
+                "ingredients" : "Sos, ser, kalmary, małże, krewetki, czosnek",
+                "price" : "32 zł"
+            },
+            {
+                "name" : "Parma",
+                "ingredients" : "Sos, ser, szynka parmeńska, rucola, parmezan, pomidorki koktajlowe",
+                "price" : "29 zł"
+            },
+            {
+                "name" : " Na życzenie",
+                "ingredients" : "Sos, ser, max 10 składników do wyboru",
+                "price" : "38 zł"
+            }    
+        ],
+        "dodatki" : 
+        [
+            {
+                "name" : "Sos do pizzy",
+                "ingredients" : "Czosnkowy, pomidorowy, meksykański",
+                "price" : "1 zł"
+            },
+            {
+                "name" : "Dodatki mięsne",
+                "ingredients" : "Boczek, salami, filet z kurczaka, wołowina, kiełbasa, szynka",
+                "price" : "4 zł"
+            },
+            {
+                "name" : "Dodatki owocowo-warzywne",
+                "ingredients" : "Ananas, cebula, czosnek, oliwki czarne, pieczarki, brokuły, kukurydza, oliwki zielone, pomidor, brzoskwinia, ogórek konserwowy, papryka",
+                "price" : "3 zł"
+            },
+            {
+                "name" : "Dodatki serowe",
+                "ingredients" : "Ser wędzony, ser feta, ser zółty, ser parmezan",
+                "price" : "4 zł"
+            }
+        ], 
+        "salatki" : 
+        [
+            {
+                "name" : "Grecka",
+                "ingredients" : "Sałata lodowa, pomidor, ogórek, feta, oliwki, cebula, sos winegret",
+                "price" : "16.00 zł"
+            },
+            {
+                "name" : "Włoska",
+                "ingredients" : "Sałata lodowa, liście szpinaku, suszony pomidor, świeży pomidor, feta, sos winegret",
+                "price" : "16.00 zł"
+            },
+            {
+                "name" : "Cezar",
+                "ingredients" : "Sałata lodowa, kurczak, parmezan, sos czosnkowy, świeży ogórek, pomidor, grzanki",
+                "price" : "16.00 zł"
+            },
+            {
+                "name" : "Atlantycka",
+                "ingredients" : "kapusta pekińska, tuńczyk, fasola czerwona, kukurydza, cebula czerwona, korniszon, sos czosnkowy",
+                "price" : "16.00 zł"
+            },
+            {
+                "name" : "Z kurczakiem",
+                "ingredients" : "Sałata lodowa, kurczak,ogórek, cebula, pomidor, papryka, pieczywo, sos",
+                "price" : "16.00 zł"
+            }
+        ],
+        "makarony" : 
+        [
+            {
+                "name" : "Spaghetti Bolognese",
+                "ingredients" : "Makaron, sos bolognese",
+                "price" : "17.50 zł"
+            },
+            {
+                "name" : "Spaghetti Carbonara",
+                "ingredients" : "Makaron, sos śmietanowy, boczek, szynka, szalotka",
+                "price" : "17.50 zł"
+            },
+            {
+                "name" : "Tragiatella",
+                "ingredients" : "Makaron, kurczak, grzyby, sos śmietanowy",
+                "price" : "22.00 zł"
+            },
+            {
+                "name" : "Penne Broccoli",
+                "ingredients" : "Makaron, brokuły, ser, czosnek",
+                "price" : "16.50 zł"
+            },
+            {
+                "name" : "Penne Pollastro",
+                "ingredients" : "Makaron, kurczak, brokuły, sos śmietanowy",
+                "price" : "19.50 zł"
+            }
+              
+        ],
+        "napoje" : 
+        [
+            {
+                "name" : "Woda",
+                "capacity" : "0.5L",
+                "price" : "3.00 zł" 
+            },
+            {
+                "name" : "Coca-Cola, Sprite, Fanta",
+                "capacity" : "0.2L/0.5L",
+                "price" : "3.00 zł/4.50 zł" 
+            },
+            {
+                "name" : "Nestea",
+                "capacity" : "0.5L",
+                "price" : "4.50 zł" 
+            },
+            {
+                "name" : "Kawa",
+                "capacity" : "",
+                "price" : "5.00 zł" 
+            },
+            {
+                "name" : "Herbata",
+                "capacity" : "",
+                "price" : "3.00 zł" 
+            },
+            {
+                "name" : "Piwo Warka",
+                "capacity" : "0.3L/0.5L",
+                "price" : "3.50 zł/5.00 zł" 
+            },
+            {
+                "name" : "Piwo Żywiec",
+                "capacity" : "0.5L",
+                "price" : "6.00 zł" 
+            },
+            {
+                "name" : "Piwo Heineken",
+                "capacity" : "0.5L",
+                "price" : "6.00 zł" 
+            }
+        ]
+    }
+]

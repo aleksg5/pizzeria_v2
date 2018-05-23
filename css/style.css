@@ -1,0 +1,897 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #181a1c;
+}
+body{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+section{
+    overflow: hidden;
+}
+
+/* Header */
+#header{
+    /* grid-area: header; */
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.5s;
+}
+#header .container{
+    display: grid;
+}
+#logo{
+    grid-area: logo;
+    align-self: center;
+    font-family: 'Italianno', cursive;
+}
+#logo a .green{
+    color: #009246;
+}
+#logo a .white{
+    color: #fff;
+}
+#logo a .red{
+    color: #ce2b37;
+}
+#logo a{
+    transition: opacity .3s;
+}
+#logo a:hover{
+    opacity: 0.8;
+}
+#logo a, #nav a, #nav-xs a{
+    color: #fff;
+    display: inline-block;
+}
+#main{
+    display: grid;
+    grid-template-areas: 
+    "slider"
+    "menu"
+    "offers"
+    "gallery"
+    "reservation"
+    "contact"
+    "map";
+    grid-template-columns: 100%;
+}
+/* Slider */
+#slider{
+    grid-area: slider;
+    overflow: hidden;
+    position: relative;
+}
+#slider-image{
+    height: 100%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    position: relative;
+}
+#slider-image #slider-arrows{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 3em;
+    display: none;
+    transition: all .3s;
+}
+#slider-image #slider-arrows i{
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    transition: all .3s;
+}
+#slider-image #slider-arrows i:hover{
+    color: #009246;
+}
+#slider-image #slider-arrows i:first-child{
+    float: left;
+}
+#slider-image #slider-arrows i:last-child{
+    float: right;
+}
+#slider-image #slider-circles{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: 1;
+}
+#slider-image #slider-circles i{
+    cursor: pointer !important;
+    color: #fff;
+    transition: all .3s;
+}
+#slider-image #slider-circles i.fas{
+    color: #009246;
+}
+#slider-image #slider-circles i:hover{
+    color: #009246;
+}
+#slider-background{
+    background: #181a1c;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left : 0;
+    opacity: 0.6;
+}
+#slider-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#slider-content .container h1{
+    font-family: 'Italiana', serif;
+    color: #fff;
+}
+#slider-content .container p{
+    font-family: 'Italiana', serif;
+    color: #b0bac4;
+    margin: 10px 0 30px;
+}
+
+
+.section-header{
+    text-align: center;
+    color: #181a1c;
+    font-family: 'Italianno', cursive;
+    font-size: 3.8em;
+    margin-bottom: 40px;
+}
+.section-header::after{
+    content: url("../img/heading.png");
+    height: 5px;
+    width: 100%;
+    display: block;
+    position: relative;
+    top: -20px;
+}
+
+/* Menu */
+#menu{
+    grid-area: menu;
+    background: url("../img/white.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#menu, #offers, #gallery, #reservation{
+    padding-bottom: 20px;
+}
+#menu .container{
+    display: grid;
+    border: 1px solid #17191b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#menu #menu-nav{
+    background: #17191b;
+    padding: 15px;
+}
+#menu #menu-nav li{
+    padding: 8px;
+}
+#menu #menu-nav a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#menu .category-menu{
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    padding: 0 10px;
+}
+
+#menu .category-menu li{
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    padding: 5px 5px;
+}
+
+#menu .category-menu-price{
+    justify-self: end;
+}
+
+/* Promocje */
+.overlay{
+    background: #000;
+    opacity: 0.6;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#offers{
+    grid-area: offers;
+    background: url("../img/pizza.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    clear: both;
+}
+#offers .section-header{
+    color: #fff;
+}
+#offers .container {
+    display: grid;
+    height: 100%;
+}
+#offers .container div{
+    background: #fff;
+    color: #181a1c;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: all .5s;
+}
+#offers .container div:hover{
+    background: #181a1c;
+}
+#offers .container div:hover h3, #offers .container div:hover p{
+    color: #fff;
+}
+#offers img{
+    height: 50%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#offers h3{
+    margin: 10px 0;
+    transition: all .5s;
+}
+#offers p{
+    margin-top: 20px;
+    transition: all .5s;
+}
+/* Galeria */
+#gallery{
+    grid-area: gallery;
+    background: url("../img/white.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#gallery-content{
+    overflow: hidden;
+    display: grid;
+}
+#gallery-content .image{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#gallery-content img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.zoomOverlay{
+    background: #000;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+.zoomImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 460px;
+    width: 550px;
+    overflow: hidden;
+    z-index: 4;
+}
+.zoomImg i{
+    float: right;
+    margin-bottom: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.zoomImg img{
+    height: 90%;
+    width: 100%;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.zoomArrows{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: none;
+}
+.zoomArrows i {
+    font-size: 2em;
+}
+.zoomArrows i:first-child{
+    float: left;
+    margin-left: 20px;
+}
+.zoomArrows i:last-child{
+    float: right;
+    margin-right: 20px;
+}
+
+/* Rezerwacja */
+#reservation{
+    grid-area: reservation;
+    background: url("../img/reservation.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+#reservation .section-header{
+    color: #fff;
+}
+#reservation .container{
+    background: #fff;
+    height: auto;
+    border-radius: 10px;
+}
+#reservation p{
+    color: #181a1c;
+    font-family: 'Italiana', serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#reservation .reservation-form{
+    padding: 20px;
+}
+#reservation .reservation-form form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto) 200px auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    box-sizing: border-box;
+}
+#reservation .reservation-form .form-group{
+    width: 100%;
+    overflow: hidden;
+}
+#reservation input:not([type="submit"]), #reservation textarea, #reservation select{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#reservation textarea{
+    height: 100%;
+}
+
+#reservation .form-group{
+    align-self: start;
+}
+#reservation .form-group:nth-last-child(2){
+    grid-column: 1/3;
+    height: 100%;
+}
+#reservation .form-group:last-child{
+    grid-column: 1/3;
+    text-align: center;
+}
+#reservation input[type="submit"]{
+    background-size: 200% 200%;
+    background-image: 
+    linear-gradient(to top, #009246 50%, transparent 50%);
+    -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    overflow: hidden;
+    color: #009246;
+    padding: 10px 20px;
+    border: 1px solid #009246;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all .3s;
+}
+#reservation input[type="submit"]:hover{
+    color: #fff;
+    border: 2px solid #009246;
+    background-image: 
+    linear-gradient(to top, #009246 51%, transparent 50%);
+    background-position: 0 100%;
+    -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+}
+/* Kontakt */
+#contact{
+    grid-area: contact;
+    /* background: url("../img/white.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; */
+    background: #fff;
+    text-align: center;
+    
+}
+#contact .container{
+    background: #fff;
+    height: 100%;
+}
+#contact li{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    font-family: 'Italianno', cursive;
+    font-size: 1.6em;
+}
+#contact li span, #contact li a{
+    justify-self: start;
+    color: #181a1c;
+}
+#contact li i{
+    color: #181a1c;
+}
+#contact li .line{
+    border-bottom: 1px dashed #181a1c;
+    align-self: center;
+    margin: 0 5px;
+}
+#contact ul:first-child li b{
+    justify-self: end;
+    color: #181a1c;
+}
+#contact h4{
+    color: #464646;
+    text-transform: uppercase;
+    font-family: 'Italiana', serif;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+#contact p{
+    color: #181a1c;
+    font-family: 'Italiana', serif;
+    font-weight: bold;
+    margin: 40px 0;
+}
+#contact li .fa-phone{
+    transform: rotateY(180deg);
+}
+#contact #contact-data ul:last-child li{
+    grid-template-columns: 30px 255px;
+    justify-content: center;
+}
+#contact #contact-data ul:last-child li span, #contact #contact-data ul:last-child li a{
+    padding-left: 20px;
+}
+/* Mapa */
+#map{
+    /* grid-area: map; */
+    width: 100%;
+}
+/* Footer */
+#footer{
+    /* grid-area: footer; */
+    background: #181a1c;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-family: 'Italiana', serif;
+}
+#footer p, #footer a{
+    color: #fff;
+    transition: color 0.3s;
+}
+#footer a:hover{
+    color: #009246;
+}
+
+
+/* to top */
+#toTop{
+    position: fixed;
+    bottom: 1%;
+    right: 2%;
+    transform: translate(-2%, -1%);
+    z-index: 1;
+    font-size: 2.5em;
+    display: none;
+}
+#toTop i{
+    cursor: pointer;
+    color: #009246;
+    border: 3px solid #009246;
+    padding: 0 8px;
+    transition: all .3s;
+}
+#toTop i:hover{
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 767px){
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #header{
+        background: #181a1c;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+        padding: 10px 0;
+    }
+    #header .container{
+        display: block;
+    }
+    #logo{
+        font-size: 2.0em;
+        text-align: center;
+    }
+    #nav{
+        display: none;
+    }
+    #nav-xs{
+        display: none;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    #button-nav{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        line-height: 40px;
+        background: #fff;
+        border: none;
+        border-radius: 10px;
+        width: 40px;
+        font-size: 1.5em;
+        transition: all 0.3;
+    }
+
+    #button-nav:hover{
+        background: #009246;  
+    }
+    #button-nav:hover i{
+        color: #fff;
+    }
+
+
+    #main{
+        grid-template-rows: 100vh repeat(5, auto) 250px;
+    }
+
+    #slider-content .container h1{
+        font-size: 2em;
+    }
+    #slider-content .container p{
+        font-size: 1.1em;
+    }
+    #slider-content .container a{
+        padding: 14px;
+        font-size: 1em;
+    }
+    #slider-image #slider-arrows i:first-child{
+        margin-left: 10px;
+    }
+    #slider-image #slider-arrows i:last-child{
+        margin-right: 10px;
+    }
+    #slider-content .container a{
+        display: inline-block;
+        border: 2px solid #009246;
+        color: #fff;
+        background: #009246;
+    }
+    /* Menu */
+    
+    #menu .container{
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    #menu #menu-nav li{
+        text-align: center;
+    }
+    /* Offers */
+    #offers .container {
+        grid-template-columns: 60%;
+        grid-template-rows: repeat(3, 400px);
+        grid-row-gap: 20px;
+        justify-content: center;
+    }
+    #offers h3{
+        font-size: 1.2em;
+    }
+    #offers p{
+        font-size: 1em;
+    }
+    /* Gallery */
+    #gallery-content{
+        height: auto;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, 250px);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        margin: 0 20px;
+    }
+    .zoomImg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 200px;
+        width: 80%;
+    }
+    .zoomImg img{
+        height: 170px;
+    }
+    /* Reservation */
+    #reservation .container{
+        height: auto;
+    }
+    /* Contact */
+    #contact .container{
+        width: 100%;
+    }
+    #contact #contact-data{
+        width: 100%;
+        margin: 60px auto;
+    }
+    #contact li, #contact p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    /* footer */
+    #footer{
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 500px){
+    /* Offers */
+    #offers .container {
+        grid-template-columns: 70%;
+        grid-template-rows: repeat(3, 400px);
+        grid-row-gap: 20px;
+        justify-content: center;
+    }
+    /* Gallery */
+    #gallery-content{
+        grid-template-columns: repeat(1, 250px);
+        grid-template-rows: repeat(8, 250px);
+        justify-content: center;
+    }  
+}
+@media (min-width: 768px){
+    .container{
+        width: 75%;
+        margin: 0 auto;
+    }
+    #logo{
+        font-size: 2.4em;
+    }
+    #header .container{
+        grid-template-columns: 180px, 1fr;
+        grid-template-areas: "logo nav";
+        grid-auto-rows: 80px;
+    }
+    #button-nav{
+        display: none;
+    }
+    #nav{
+        grid-area: nav;
+        justify-self: end;
+        align-self: center;
+        font-size: 1.1em;
+        font-family: 'Italiana', serif;
+    }
+    #nav li{
+        display: inline;
+        margin: 0 10px;
+        padding-bottom: 2px;
+    }
+    
+    #nav a::after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: rgba(0,146,71,1);
+        background: -moz-linear-gradient(left, rgba(0,146,71,1) 0%, rgba(0,146,71,1) 33%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 66%, rgba(206,43,54,1) 66%, rgba(206,43,54,1) 100%);
+        background: -webkit-linear-gradient(left, rgba(0,146,71,1) 0%, rgba(0,146,71,1) 33%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 66%, rgba(206,43,54,1) 66%, rgba(206,43,54,1) 100%);
+        background: -o-linear-gradient(left, rgba(0,146,71,1) 0%, rgba(0,146,71,1) 33%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 66%, rgba(206,43,54,1) 66%, rgba(206,43,54,1) 100%);
+        background: -ms-linear-gradient(left, rgba(0,146,71,1) 0%, rgba(0,146,71,1) 33%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 66%, rgba(206,43,54,1) 66%, rgba(206,43,54,1) 100%);
+        background: linear-gradient(to right, rgba(0,146,71,1) 0%, rgba(0,146,71,1) 33%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 66%, rgba(206,43,54,1) 66%, rgba(206,43,54,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009247', endColorstr='#ce2b36', GradientType=1 );
+        transition: width .3s;
+    }
+    #nav a:hover::after{
+        width: 100%;
+        transition: width .3s;     
+    }
+    #nav-xs{
+        display: none;
+    }
+
+    #main{
+        grid-template-rows: 100vh repeat(5, auto) 400px;
+    }
+
+    #slider-content .container h1{
+        font-size: 3em;
+    }
+    #slider-content .container p{
+        font-size: 1.3em;
+    }
+    #slider-content .container a{
+        padding: 16px;
+        font-size: 1em;
+    }
+    #slider-image #slider-arrows i:first-child{
+        margin-left: 40px;
+    }
+    #slider-image #slider-arrows i:last-child{
+        margin-right: 40px;
+    }
+    #slider-content .container a{
+        display: inline-block;
+        border: 2px solid #009246;
+        color: #fff;
+        background: #009246;
+    }
+    /* Menu */
+    #menu .container{
+        width: 60%;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 520px;
+    }
+    /* Offers */
+    #offers .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 360px;
+        grid-column-gap: 30px;
+    }
+    #offers h3{
+        font-size: 1.2em;
+    }
+    #offers p{
+        font-size: 1em;
+    }
+    /* Gallery */
+    #gallery-content{
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    #gallery-content img:hover{
+        height: 110%;
+        width: 110%;
+    }
+    /* Contact */
+    #contact .container{
+        width: 45%;
+    }
+    #contact #contact-data{
+        width: 80%;
+        margin: 60px auto;
+    }
+    /* Footer */
+    #footer{
+        font-size: 1em;
+    }
+}
+@media (min-width: 992px){
+    #logo{
+        font-size: 2.8em;
+    }
+    #slider-content .container h1{
+        font-size: 3.5em;
+    }
+    #slider-content .container p{
+        font-size: 1.4em;
+    }
+    #slider-content .container a{
+        padding: 18px;
+        font-size: 1.1em;
+    }
+    /* Offers */
+    #offers .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 520px;
+        grid-column-gap: 30px;
+    }
+    #offers h3{
+        font-size: 1.4em;
+    }
+    #offers p{
+        font-size: 1.1em;
+    }
+    /* Gallery */
+    #gallery-content{
+        grid-template-rows: repeat(2, 250px);
+    }
+    /* Contact */
+    #contact #contact-data{
+        width: 60%;
+    }
+}
+@media (min-width: 1200px){
+    #slider-content .container h1{
+        font-size: 4em;
+    }
+    #slider-content .container p{
+        font-size: 1.5em;
+    }
+    #slider-content .container a{
+        padding: 20px;
+        font-size: 1.2em;
+    }
+    #slider-content .container a{
+        display: inline-block;
+        border: 2px solid #009246;
+        color: #fff;
+        background: none;
+        background-size: 200% 200%;
+        background-image: 
+        linear-gradient(to top, #009246 50%, transparent 50%);
+        -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        overflow: hidden;
+    }
+    #slider-content .container a:hover{
+        color: white;
+        border: 2px solid #009246;
+        background-image: 
+        linear-gradient(to top, #009246 51%, transparent 50%);
+        background-position: 0 100%;
+        -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+        transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    }
+     #gallery-content{
+        grid-template-rows: repeat(2, minmax(50px, 250px));
+    }
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizzeria Italia</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Italiana" rel="stylesheet">
+    <link rel="stylesheet" href="includes/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- Delice -->
+    <header id="header">
+        <div class="container">
+            <div id="logo">
+                <a href="#main">Pizzeria <span class="green">It</span><span class="white">al</span><span class="red">ia</span></a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#offers">Promocje</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#reservation">Rezerwacja</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button id="button-nav"><i class="fas fa-align-justify"></i></button>
+            <nav id="nav-xs">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#offers">Promocje</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#reservation">Rezerwacja</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <!-- Soup -->
+        <section id="slider">
+            <div id="slider-image">
+                <div id="slider-arrows">
+                    <i class="fas fa-angle-left"></i>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div id="slider-circles">
+                    <i id="1" class="far fa-circle fas"></i>
+                    <i id="2" class="far fa-circle"></i>
+                    <i id="3" class="far fa-circle"></i>
+            </div>
+            </div>
+            <div id="slider-background"></div>
+            <div id="slider-content">
+                <div class="container"></div>
+            </div>
+        </section>
+        
+        <!-- moj template/soup -->
+        <section id="menu">
+                <h1 class="section-header">Menu</h1>
+            <div class="container">
+                <div id="menu-nav">
+                    <ul>
+                        <li><a href="#pizza">Pizza</a></li>
+                        <li><a href="#dodatki">Dodatki do pizzy</a></li>
+                        <li><a href="#salatki">Sałatki</a></li>
+                        <li><a href="#makarony">Makarony</a></li>
+                        <li><a href="#napoje">Napoje</a></li>
+                    </ul>
+                </div>
+                <div id="menu-content">
+                    <div class="category-menu"><ul></ul></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- moj template -->
+        <section id="offers">
+            <div class="overlay"></div>
+            <h1 class="section-header">Promocje</h1>
+            <div class="container"></div>
+        </section>
+
+        
+        <!-- moj template -->
+        <section id="gallery">
+            <div class="container">
+                <h1 class="section-header">Galeria</h1>
+                <div id="gallery-content">
+                    <div class="image">
+                        <img src="img/gallery/1.jpg" alt="Zdjęcie1">
+                    </div>
+                    <div class="image">
+                        <img src="img/gallery/2.jpg" alt="Zdjęcie2">
+                    </div>
+                    <div class="image">
+                        <img src="img/gallery/3.jpg" alt="Zdjęcie3">
+                    </div>
+                    <div class="image">
+                        <img src="img/gallery/4.jpg" alt="Zdjęcie4">
+                    </div>
+                    <div class="image">
+                        <img src="img/gallery/5.jpg" alt="Zdjęcie5">
+                    </div>
+                    <div class="image">
+                        <img src="img/gallery/6.jpg" alt="Zdjęcie6">
+                    </div>
+                    <div class="image">
+                        <img src="img/gallery/7.jpg" alt="Zdjęcie7">
+                    </div>
+                    <div class="image">
+                        <img src="img/gallery/8.jpg" alt="Zdjęcie8">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- delice -->
+        <section id="reservation">
+                <div class="overlay"></div>
+                <h1 class="section-header">Rezerwacja</h1>
+                <div class="container">           
+                    <div class="reservation-form">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, ipsam!</p>
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" name="firstname" placeholder="Imię *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="lastname" placeholder="Nazwisko *" required>
+                                </div>
+                            <div class="form-group">
+                                <input type="text" name="phone" placeholder="Numer telefonu *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Adres email *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="date" value="dd.mm.rrrr *" required id="date">
+                            </div>
+                            <div class="form-group">
+                                <select name="guests" id="guests" required>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Dodatkowa informacja"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Zarezerwuj">
+                            </div>
+                        </form>
+                    </div> 
+                </div>
+            </section>
+
+        <!-- delice -->
+        <section id="contact">
+            <div class="container">
+                <h1 class="section-header">Kontakt</h1>
+                    <div id="contact-data">
+                        <h4>Godziny otwarcia</h4>
+                            <ul>
+                                <li><span>Poniedziałek-Czwartek</span><i class="line"></i><b>10:00-22:00</b></li>
+                                <li><span>Piątek-Sobota</span><i class="line"></i><b>10:00-23:00</b></li>
+                                <li><span>Niedziela</span><i class="line"></i><b>12:00-23:00</b></li>
+                            </ul>
+                            <p>Zamówienia telefoniczne są przyjmowane do pół godziny przed zamknięciem lokalu</p>
+                        <h4>Skontaktuj się z nami</h4>
+                            <ul>
+                                <li><i class="fas fa-map-marker"></i><span>ul. Gromskiego 8 35-233 Rzeszów</span></li>
+                                <li><i class="fas fa-phone"></i><span>123 456 789</span></li>
+                                <li><i class="fas fa-envelope"></i><a href="mailto:pizzeriaitalia@gmail.com">pizzeriaitalia@gmail.com</a></li>
+                            </ul>
+                    </div>
+            </div>
+        </section>
+        <!-- delice -->
+        <section id="map">
+        </section>
+    </main>    
+  
+    <footer id="footer">
+        <div class="container">
+            <p>© 2018 Wszystkie prawa zastrzeżone - <a href="#">Aleksander Gajda</a></p>
+        </div>
+    </footer>
+
+    <div id="toTop"><a href="#main"><i class="fas fa-angle-up"></i></a></div>
+    <script>
+        function initMap() {
+          // Styles a map in night mode.
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 50.064392, lng: 22.008192},
+            zoom: 16,
+            styles: [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#181a1c"
+                    }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#746855"
+                    }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                    {
+                        "color": "#242f3e"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "administrative.locality",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#d59563"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#ffffff"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#263c3f"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#6b9a76"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#38414e"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                    {
+                        "color": "#212a37"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#9ca5b3"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#746855"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                    {
+                        "color": "#1f2835"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#f3d19c"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#2f3948"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "transit.station",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#d59563"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#17263c"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#515c6d"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                    {
+                        "color": "#17263c"
+                    }
+                    ]
+                }
+                ]
+          });
+          var marker = new google.maps.Marker({
+                position: {lat: 50.064392, lng: 22.008192},
+                map: map
+            });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2XYI33Mvh05vmbcvnoJ5oQdBpmy-Enj0&callback=initMap"
+      async defer></script>
+  
+
+
+
+
+
+      
+
+
+</body>
+</html>
